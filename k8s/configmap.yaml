@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: online-event-booking
+data:
+  POSTGRES_DB: mc
+  BOOKING_DB: booking_service
+  MONGO_URI: "mongodb://mongo-service:27017/event_service"  # For event-service
+  RABBITMQ_URL: "amqp://rabbitmq-service:5672"
+  DB_HOST: "user-db-service"  # Matches your PostgreSQL Service
+  DB_USER: "postgres"
+  DB_PASSWORD: "1234"
+  DB_PORT: "5432"

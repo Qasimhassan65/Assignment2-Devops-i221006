@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-service
+  namespace: online-event-booking
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-service
+  template:
+    metadata:
+      labels:
+        app: frontend-service
+    spec:
+      containers:
+        - name: frontend-service
+          image: qasimhassan65/devops_assignment-frontend:latest
+          ports:
+            - containerPort: 3001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+  namespace: online-event-booking
+spec:
+  selector:
+    app: frontend-service
+  ports:
+    - port: 3001
+      targetPort: 3001
+ 

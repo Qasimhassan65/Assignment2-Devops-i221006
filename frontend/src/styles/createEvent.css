@@ -1,0 +1,113 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Create Event Page Container */
+.create-event-page {
+  max-width: 500px; /* Slightly wider than Login/Register for more form space */
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  border: 1px solid #e0e0e0; /* Subtle border */
+}
+
+/* Heading */
+.create-event-page h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #2C3E50; /* Deep Blue-Gray */
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Error Message */
+.create-event-error {
+  color: #E74C3C; /* Vibrant Red */
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+/* Create Event Form */
+.create-event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Increased spacing for better readability */
+}
+
+/* Inputs and Textarea */
+.create-event-form input,
+.create-event-form textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-event-form input:focus,
+.create-event-form textarea:focus {
+  border-color: #2C3E50; /* Deep Blue-Gray */
+  box-shadow: 0 0 5px rgba(44, 62, 80, 0.3); /* Subtle glow */
+}
+
+.create-event-form input::placeholder,
+.create-event-form textarea::placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+/* Textarea Specific Styling */
+.create-event-form textarea {
+  min-height: 100px; /* Decent height for description */
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Button */
+.create-event-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #E74C3C; /* Vibrant Red */
+  border: none;
+  border-radius: 20px; /* Pill-like button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3); /* Subtle red shadow */
+}
+
+.create-event-form button:hover {
+  background-color: #C0392B; /* Darker red */
+  transform: scale(1.05); /* Slight scale effect */
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.4); /* Enhanced shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .create-event-page {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .create-event-page h1 {
+    font-size: 1.75rem;
+  }
+
+  .create-event-form input,
+  .create-event-form textarea,
+  .create-event-form button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .create-event-error {
+    font-size: 0.85rem;
+  }
+}

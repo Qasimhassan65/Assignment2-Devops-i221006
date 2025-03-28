@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+  namespace: online-event-booking
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+        - name: user-service
+          image: qasimhassan65/devops_assignment-user-service:latest
+          ports:
+            - containerPort: 4000
+          env:
+            - name: DB_HOST
+              value: user-db-service
+            - name: DB_USER
+              value: postgres
+            - name: DB_PASSWORD
+              value: 1234
+            - name: DB_NAME
+              value: mc
+            - name: DB_PORT
+              value: "5432"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-service
+  namespace: online-event-booking
+spec:
+  selector:
+    app: user-service
+  ports:
+    - port: 4000
+      targetPort: 4000

@@ -1,0 +1,120 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Booking Page Container */
+.booking-page {
+  max-width: 500px; /* Consistent with forms like CreateEvent */
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  border: 1px solid #e0e0e0; /* Subtle border */
+}
+
+/* Heading */
+.booking-page h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #2C3E50; /* Deep Blue-Gray */
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Event Details */
+.booking-date,
+.booking-tickets {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 0.75rem;
+}
+
+.booking-date strong,
+.booking-tickets strong {
+  color: #2C3E50;
+  font-weight: 600;
+}
+
+/* Label */
+.booking-label {
+  font-size: 1rem;
+  color: #2C3E50;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  display: block; /* Ensures it sits above the input */
+}
+
+/* Ticket Input */
+.booking-ticket-input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  width: 100%; /* Full width for consistency */
+  max-width: 200px; /* Limits width for better aesthetics */
+  margin: 0 auto; /* Centers the input */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-ticket-input:focus {
+  border-color: #2C3E50; /* Deep Blue-Gray */
+  box-shadow: 0 0 5px rgba(44, 62, 80, 0.3); /* Subtle glow */
+}
+
+/* Confirm Button */
+.booking-confirm-btn {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #E74C3C; /* Vibrant Red */
+  border: none;
+  border-radius: 20px; /* Pill-like button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3); /* Subtle red shadow */
+}
+
+.booking-confirm-btn:hover {
+  background-color: #C0392B; /* Darker red */
+  transform: scale(1.05); /* Slight scale effect */
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.4); /* Enhanced shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .booking-page {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .booking-page h1 {
+    font-size: 1.75rem;
+  }
+
+  .booking-date,
+  .booking-tickets {
+    font-size: 0.9rem;
+  }
+
+  .booking-label {
+    font-size: 0.9rem;
+  }
+
+  .booking-ticket-input {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    max-width: 150px; /* Smaller input on mobile */
+  }
+
+  .booking-confirm-btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,120 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Confirmation Page Container */
+.confirmation-page {
+  max-width: 800px; /* Wider to accommodate multiple cards */
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F6FA; /* Light Gray background */
+}
+
+/* Heading */
+.confirmation-page h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #2C3E50; /* Deep Blue-Gray */
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* Confirmation Booking Card */
+.confirmation-booking-card {
+  background-color: #FFFFFF;
+  border-radius: 12px; /* Rounded corners */
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  margin-bottom: 1.5rem; /* Space between cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.confirmation-booking-card:hover {
+  transform: translateY(-8px); /* Lift on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Booking Details */
+.confirmation-booking-card p {
+  font-size: 0.95rem;
+  color: #333333;
+  margin-bottom: 0.75rem;
+}
+
+.confirmation-booking-card p strong {
+  color: #2C3E50; /* Deep Blue-Gray */
+  font-weight: 600;
+}
+
+/* Status */
+.confirmation-status {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #27AE60; /* Green for confirmed status */
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* Back Button */
+.confirmation-back-btn {
+  display: block; /* Center button */
+  margin: 2rem auto 0;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #2C3E50; /* Deep Blue-Gray for contrast */
+  border: none;
+  border-radius: 20px; /* Pill-like button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(44, 62, 80, 0.3); /* Subtle shadow */
+}
+
+.confirmation-back-btn:hover {
+  background-color: #1F2A3C; /* Darker shade */
+  transform: scale(1.05); /* Slight scale effect */
+  box-shadow: 0 4px 8px rgba(44, 62, 80, 0.4); /* Enhanced shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .confirmation-page h1 {
+    font-size: 2rem;
+  }
+
+  .confirmation-booking-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .confirmation-page {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .confirmation-page h1 {
+    font-size: 1.75rem;
+  }
+
+  .confirmation-booking-card {
+    padding: 1rem;
+  }
+
+  .confirmation-booking-card p {
+    font-size: 0.9rem;
+  }
+
+  .confirmation-status {
+    font-size: 0.85rem;
+  }
+
+  .confirmation-back-btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}

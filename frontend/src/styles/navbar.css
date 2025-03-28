@@ -1,0 +1,134 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #2C3E50; /* Deep Blue-Gray */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it stays above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #FFFFFF; /* White for contrast */
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Space between links */
+  align-items: center; /* Aligns items including button vertically */
+}
+
+.nav-links li {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #FFFFFF; /* White text */
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+.nav-links a:hover {
+  color: #E74C3C; /* Vibrant Red on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Logout Button */
+.navbar-logout-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #E74C3C; /* Vibrant Red */
+  border: none;
+  border-radius: 20px; /* Pill-like button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3); /* Subtle red shadow */
+}
+
+.navbar-logout-btn:hover {
+  background-color: #C0392B; /* Darker red on hover */
+  transform: scale(1.05); /* Slight scale effect */
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.4); /* Enhanced shadow */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex; /* Shown when toggled */
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .navbar-logout-btn {
+    width: 100%; /* Full-width button on mobile */
+    padding: 0.6rem;
+  }
+
+  /* Hamburger menu styling (requires JS toggle) */
+  .navbar-container::after {
+    content: '\2630'; /* Hamburger icon (☰) */
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+    cursor: pointer;
+  }
+
+  .nav-links.active + .navbar-container::after {
+    content: '\2715'; /* Close icon (✕) */
+  }
+}
+
+/* Larger screens */
+@media (min-width: 769px) {
+  .navbar-container::after {
+    display: none; /* Hide hamburger on desktop */
+  }
+}
